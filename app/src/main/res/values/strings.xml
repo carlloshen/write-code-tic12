@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Write Code</string>
+    <string name="text_header">Spettos Grill</string>
+    <string name="text_sub_header">Para selecionar seu pedido marque uma opção</string>
+
+    <string name="text_entries">Entradas</string>
+
+    <string name="checkbox_entries_1">Batata Frita</string>
+    <string name="text_items_entries_1">Batata frita e molho especial da casa</string>
+    <string name="text_price_entries_1">R$ 25.00</string>
+    <string name="text_time_entries_1">tempo de preparo: aprox. 15 minutos</string>
+
+    <string name="checkbox_entries_2">Feijão Verde</string>
+    <string name="text_items_entries_2">Feijão verde com carne do sol</string>
+    <string name="text_price_entries_2">R$ 30.00</string>
+    <string name="text_time_entries_2">tempo de preparo: aprox. 25 minutos</string>
+
+    <string name="checkbox_entries_3">Pão de Alho</string>
+    <string name="text_items_entries_3">Pães de alho (5 und)</string>
+    <string name="text_price_entries_3">R$ 15.00</string>
+    <string name="text_time_entries_3">tempo de preparo: aprox. 10 minutos</string>
+
+    <string name="text_main_dishes">Pratos Principais</string>
+
+    <string name="checkbox_plate_1">Carne do Sol</string>
+    <string name="text_items_plate_1">Carne do sol com 2 porções de baião e batata </string>
+    <string name="text_price_plate_1">R$ 86.00</string>
+    <string name="text_time_plate_1">tempo de preparo: aprox. 35 minutos</string>
+
+    <string name="checkbox_plate_2">Maminha</string>
+    <string name="text_items_plate_2">Maminha com 2 porções de baião e batata </string>
+    <string name="text_price_plate_2">R$ 129.00</string>
+    <string name="text_time_plate_2">tempo de preparo: aprox. 35 minutos</string>
+
+    <string name="checkbox_plate_3">Peixe ao Molho</string>
+    <string name="text_items_plate_3">Peixe ao molho com 2 porções de baião e batata </string>
+    <string name="text_price_plate_3">R$ 84.00</string>
+    <string name="text_time_plate_3">tempo de preparo: aprox. 40 minutos</string>
+
+    <string name="checkbox_plate_4">Picanha</string>
+    <string name="text_items_plate_4">Picanha com 2 porções de baião e batata</string>
+    <string name="text_price_plate_4">R$ 125.00</string>
+    <string name="text_time_plate_4">tempo de preparo: aprox. 35 minutos</string>
+
+    <string name="text_drinks">Bebidas</string>
+
+    <string name="checkbox_drink_1">Agua sem Gas</string>
+    <string name="text_price_drink_1">R$ 4.50</string>
+
+    <string name="checkbox_drink_2">Cajuina</string>
+    <string name="text_price_drink_2">R$ 12.00</string>
+
+    <string name="checkbox_drink_3">Refri Lata</string>
+    <string name="text_price_drink_3">R$ 7.90</string>
+
+    <string name="text_desserts">Sobremesas</string>
+
+    <string name="checkbox_dessert_1">Banoffe</string>
+    <string name="text_price_dessert_1">R$ 10.00</string>
+
+    <string name="checkbox_dessert_2">Mousse</string>
+    <string name="text_price_dessert_2">R$ 10.00</string>
+
+    <string name="checkbox_dessert_3">Pudim</string>
+    <string name="text_price_dessert_3">R$ 10.00</string>
+
+    <string name="edit_text_observations">Digite informações adicionais sobre o pedido</string>
+    <string name="text_total_price">R$ 0.00</string>
+    <string name="text_total_time_waiting"></string>
+    <string name="button_calculate">Calcular</string>
+    <string name="button_close_order_desabilited">Clique calcular</string>
+    <string name="button_close_order">Fechar pedido</string>
+
+    <string name="message_error_no_products">Porfavor, selecione um produto</string>
+    <string name="message_success">Seu pedido foi enviado para o balcão do restaurante</string>
+    <string name="estimated_time">TEMPO ESTIMADO É DE %d MINUTOS</string>
+    <string name="time_zero">FECHE O PEDIDO E SIGA PARA O BALCÃO</string>
+
+</resources>

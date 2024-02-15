@@ -1,0 +1,1276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:background="@color/red_wood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_top"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_header"
+                    android:fontFamily="@font/heineken1"
+                    android:textAllCaps="true"
+                    android:textSize="40sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.4" />
+
+                <TextView
+                    android:id="@+id/text_secondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_sub_header"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_header" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/text_entries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_mono_bold"
+            android:text="@string/text_entries"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_top" />
+
+        <View
+            android:id="@+id/view_offset_helper"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_entries" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_entries_1"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_offset_helper"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_entries_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_entries_1"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/potato"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_entries_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_entries_name_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_entries_1"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_entries_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+                <TextView
+                    android:id="@+id/text_items_entries_1"
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:text="@string/text_items_entries_1"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_entries_name_1"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_entries_1"/>
+                <TextView
+                    android:id="@+id/text_time_entries_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_time_entries_1"
+                    android:layout_marginStart="10dp"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_entries_1"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_price_entries_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_entries_1"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_entries_2"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_entries_1"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_entries_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_entries_2"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/green_bean"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_entries_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_entries_name_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_entries_2"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_entries_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+                <TextView
+                    android:id="@+id/text_items_entries_2"
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:text="@string/text_items_entries_2"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_entries_name_2"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_entries_2"/>
+                <TextView
+                    android:id="@+id/text_time_entries_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_time_entries_2"
+                    android:layout_marginStart="10dp"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_entries_2"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_price_entries_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_entries_2"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_entries_3"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_entries_2"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_entries_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_entries_3"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/garlic_bread"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_entries_3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_entries_name_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_entries_3"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_entries_3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+                <TextView
+                    android:id="@+id/text_items_entries_3"
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:text="@string/text_items_entries_3"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_entries_name_3"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_entries_3"/>
+                <TextView
+                    android:id="@+id/text_time_entries_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_time_entries_3"
+                    android:layout_marginStart="10dp"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_entries_3"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_price_entries_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_entries_3"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- OUTRA SEÇÃO -->
+        <TextView
+            android:id="@+id/text_main_dishes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_mono_bold"
+            android:text="@string/text_main_dishes"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_entries_3" />
+
+        <View
+            android:id="@+id/view_offset_helper_1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/black"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_main_dishes" />
+
+        <!-- dishes -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_plates_1"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_main_dishes"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_plate_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_plates_1"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/sun_meat"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_plate_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_plate_name_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_plate_1"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_plates_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+                <TextView
+                    android:id="@+id/text_items_plate_1"
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:text="@string/text_items_plate_1"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_plate_name_1"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_plates_1"/>
+                <TextView
+                    android:id="@+id/text_time_plate_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_time_plate_1"
+                    android:layout_marginStart="10dp"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_plates_1"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_price_plate_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_plate_1"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_plates_2"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_plates_1"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_plate_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_plates_2"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/beef_rump"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_plate_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_plate_name_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_plate_2"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_plates_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+                <TextView
+                    android:id="@+id/text_items_plate_2"
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:text="@string/text_items_plate_2"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_plate_name_2"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_plates_2"/>
+                <TextView
+                    android:id="@+id/text_time_plate_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_time_plate_2"
+                    android:layout_marginStart="10dp"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_plates_2"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_price_plate_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_plate_2"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_plates_3"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_plates_2"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_plate_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_plate_3"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/fish_in_sauce"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_plate_3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_plate_name_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_plate_3"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_plate_3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+                <TextView
+                    android:id="@+id/text_items_plate_3"
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:text="@string/text_items_plate_3"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_plate_name_3"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_plate_3"/>
+                <TextView
+                    android:id="@+id/text_time_plate_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_time_plate_3"
+                    android:layout_marginStart="10dp"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_plate_3"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_price_plate_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_plate_3"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_plates_4"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_plates_3"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_plate_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_plate_4"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/rump_steak"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_plate_4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_plate_name_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_plate_4"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_plate_4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+                <TextView
+                    android:id="@+id/text_items_plate_4"
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:text="@string/text_items_plate_4"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_plate_name_4"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_plate_4"/>
+                <TextView
+                    android:id="@+id/text_time_plate_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_time_plate_4"
+                    android:layout_marginStart="10dp"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_plate_4"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_price_plate_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_plate_4"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- FALTA EDITAR DAQUI PRA BAIXO-->
+
+        <TextView
+            android:id="@+id/text_drinks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_mono_bold"
+            android:text="@string/text_drinks"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_plates_4" />
+
+        <View
+            android:id="@+id/view_offset_helper_3"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/black"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_drinks" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_drinks_1"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_drinks"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_drink_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_drink_1"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/water"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_drink_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_drink_name_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_drink_1"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_drink_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+
+
+
+                <TextView
+                    android:id="@+id/text_price_drink_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_drink_1"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_drinks_2"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_drinks_1"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_drink_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_drink_2"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/cajuine"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_drink_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_drink_name_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_drink_2"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_drink_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+
+                <TextView
+                    android:id="@+id/text_price_drink_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_drink_2"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_drinks_3"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_drinks_2"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_drink_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_drink_3"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/coke"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_drink_3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_drink_name_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_drink_3"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_drink_3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+
+                <TextView
+                    android:id="@+id/text_price_drink_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_drink_3"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/text_desserts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_mono_bold"
+            android:text="@string/text_desserts"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_drinks_3" />
+
+        <View
+            android:id="@+id/view_offset_helper_2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/black"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_desserts" />
+        <!-- Outra seção desserts -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_desserts_1"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_offset_helper_2"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_desserts_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_desserts_1"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/dessert_1"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_desserts_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_desserts_name_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_dessert_1"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_desserts_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+
+                <TextView
+                    android:id="@+id/text_price_dessert_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_dessert_1"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_desserts_2"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_desserts_1"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_desserts_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_desserts_2"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/mousse"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_desserts_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_desserts_name_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_dessert_2"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_desserts_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+
+                <TextView
+                    android:id="@+id/text_price_dessert_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_dessert_2"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_desserts_3"
+            android:layout_width="380dp"
+            android:layout_height="95dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_desserts_2"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox_desserts_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_image_desserts_3"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/pudding"
+                    tools:layout_editor_absoluteX="102dp"
+                    tools:layout_editor_absoluteY="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_desserts_3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_desserts_name_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_dessert_3"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle_image_desserts_3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.14" />
+
+                <TextView
+                    android:id="@+id/text_price_dessert_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price_dessert_3"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <EditText
+            android:id="@+id/edit_text_observations"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/edit_text_observations"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_desserts_3" />
+
+
+        <TextView
+            android:id="@+id/text_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_total_price"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_observations"
+            app:layout_constraintVertical_bias="0.187" />
+
+        <TextView
+            android:id="@+id/text_total_time_waiting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_total_time_waiting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_total_price" />
+
+        <Button
+            android:id="@+id/button_calculate"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/red_wood"
+            android:text="@string/button_calculate"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_close_order"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_total_time_waiting" />
+
+
+        <Button
+            android:id="@+id/button_close_order"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/button_close_order"
+            android:textSize="20sp"
+            android:textColor="@color/button_text_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="@color/button_background_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_calculate"
+            app:layout_constraintTop_toBottomOf="@+id/text_total_time_waiting" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
